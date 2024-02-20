@@ -1,0 +1,25 @@
+<form ng-submit="submitForm()" name="signupForm">
+    <label>First Name:
+        <input type="text" ng-model="formData.firstName" required>
+    </label>
+
+    <label>Last Name:
+        <input type="text" ng-model="formData.lastName" required>
+    </label>
+
+    <label>Email:
+        <input type="email" ng-model="formData.email" required>
+    </label>
+
+    <label>Phone:
+        <input type="text" ng-model="formData.phone" required>
+    </label>
+
+    <label>Menu Number:
+        <input type="text" ng-model="formData.menuNumber" required>
+    </label>
+
+    <button type="submit" ng-disabled="signupForm.$invalid">Submit</button>
+</form>
+<div ng-show="menuNotExist">No such menu number exists.</div>
+<div ng-show="infoSaved">Your information has been saved.</div>

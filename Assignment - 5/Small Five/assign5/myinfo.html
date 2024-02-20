@@ -1,0 +1,13 @@
+<div ng-show="userRegistered">
+    <h2>User Information</h2>
+    <p><strong>First Name:</strong> {{ userPreference.firstName }}</p>
+    <p><strong>Last Name:</strong> {{ userPreference.lastName }}</p>
+    <p><strong>Email:</strong> {{ userPreference.email }}</p>
+    <p><strong>Phone Number:</strong> {{ userPreference.phone }}</p>
+    <p><strong>Favorite Menu Item:</strong> {{ userPreference.menuNumber }}</p>
+    <img ng-src="{{ menuItemImageUrl }}" alt="{{ menuItemTitle }}">
+    <p>{{ menuItemDescription }}</p>
+</div>
+<div ng-hide="userRegistered">
+    Not Signed Up Yet. <a href="#/signup">Sign up Now!</a>
+</div>
